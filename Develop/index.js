@@ -111,7 +111,7 @@ function questions() {
         },
         {
             type: 'input',
-            name: 'contributions',
+            name: 'contributors',
             message: "what are the guidelines to contribute in your project?",
             validate: contribute => {
                 if (contribute) {
@@ -125,7 +125,7 @@ function questions() {
         },
         {
             type: 'input',
-            name: 'test',
+            name: 'tests',
             message: "how do you test your project?",
             validate: tests => {
                 if (tests) {
@@ -133,6 +133,34 @@ function questions() {
                 }
                 else{
                     console.log('please enter an input.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: "what is your Github username?",
+            validate: username => {
+                if (username) {
+                    return true;
+                }
+                else{
+                    console.log('please enter a username.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "what is your email?",
+            validate: email => {
+                if (email) {
+                    return true;
+                }
+                else{
+                    console.log('please enter a email');
                     return false;
                 }
             }
