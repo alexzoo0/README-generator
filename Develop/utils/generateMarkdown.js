@@ -5,7 +5,7 @@ const index = require('../index.js');
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license){
-  const badge = '';
+  let badge = '';
   if (license === 'MIT'){
     badge = '![Github License](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)'
   }else if (license === 'Apache 2.0') {
@@ -21,7 +21,7 @@ function renderLicenseBadge(license){
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  const licensePart = '';
+  let licensePart = '';
   if(license === 'MIT'){
     licensePart = 'https://choosealicense.com/licenses/mit/'
   }else if (license === 'Apache 2.0'){
@@ -37,7 +37,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  const section = ''
+  let section = '';
   if (license === 'None'){
     section = ''
   } else{
@@ -65,7 +65,7 @@ function generateMarkdown(data) {
   - You must install the follwoing for this project to work:
   ${data.installation}
   ## Usage
-  ${date.usage}
+  ${data.usage}
   ## Features:
   ${data.features}
   ## contributoors:

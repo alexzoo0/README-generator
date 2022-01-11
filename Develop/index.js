@@ -175,8 +175,8 @@ function questions() {
 async function init() {
     try{
         const answers = await questions();
-        const generate = generateMarkdown(answers);
-        await writeFiles('./generatedREADME.md', generate);
+        let generate = generateMarkdown(answers);
+        await writeFiles('../README.md', generate);
         console.log("sucess, checkout your generatedREADME.md");
     }
         catch(err) {
