@@ -164,19 +164,6 @@ function questions() {
                 }
             }
         },
-        {
-            type: 'list',
-            name: 'license',
-            message: 'Please select a license for this project.',
-            choices: [
-                'MIT',
-                'ISC',
-                'GPL_3.0',
-                'MPL_2.0',
-                'Apache-2.0',
-                'None'
-            ]
-        }
 
 
 
