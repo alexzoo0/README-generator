@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+    // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require("util");
@@ -40,7 +40,7 @@ function questions() {
         {
             type: 'input',
             name: 'installation',
-            message: "Provide steps on what is required to install to get up and running",
+            message: "You must install the follwoing for this project to work:",
             validate: installation => {
                 if (installation) {
                     return true;
@@ -164,6 +164,19 @@ function questions() {
                 }
             }
         },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'Please select a license for this project.',
+            choices: [
+                'MIT',
+                'ISC',
+                'GPL_3.0',
+                'MPL_2.0',
+                'Apache-2.0',
+                'None'
+            ]
+        }
 
 
 
